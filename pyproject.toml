@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=75,<82"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qa-runner-local"
+version = "0.1.0"
+description = "Local-first isolated QA execution primitives for desktop and web applications"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Win32 (MS Windows)",
+  "Operating System :: Microsoft :: Windows",
+  "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.optional-dependencies]
+windows = ["pywin32>=311"]
+
+[tool.setuptools.packages.find]
+include = ["qa_runner*"]
